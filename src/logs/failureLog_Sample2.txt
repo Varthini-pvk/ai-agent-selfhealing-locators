@@ -1,0 +1,568 @@
+==================================================
+Test Suite: Checkout Flow
+Test: should submit order successfully
+Status: FAILED
+==================================================
+
+Error: locator.click: strict mode violation
+
+Locator:
+page.locator('.submit-order-btn')
+
+Resolved to:
+3 elements matching selector ".submit-order-btn"
+
+Call log:
+- waiting for locator('.submit-order-btn')
+- locator resolved to 3 elements
+- attempting click action
+
+Stack Trace:
+at CheckoutPage.submitOrder (pages/checkout.page.ts:42:15)
+at tests/checkout.spec.ts:18:5
+
+Duration: 12.4s
+Browser: chromium
+
+
+==================================================
+Test Suite: User Profile
+Test: should display updated username
+Status: FAILED
+==================================================
+
+Error: expect(received).toContain(expected)
+
+Expected substring:
+"Varthini"
+
+Received:
+"Guest User"
+
+Assertion:
+await expect(profileName).toContainText("Varthini")
+
+Stack Trace:
+at tests/profile.spec.ts:44:5
+
+Duration: 8.9s
+Browser: chromium
+
+
+==================================================
+Test Suite: Search Flow
+Test: should display search results
+Status: FAILED
+==================================================
+
+Error: locator.fill: Timeout 10000ms exceeded.
+
+Locator:
+page.locator('#search-input')
+
+Call log:
+- waiting for locator('#search-input')
+- locator not visible
+
+Stack Trace:
+at SearchPage.search (pages/search.page.ts:22:10)
+at tests/search.spec.ts:14:5
+
+Duration: 10.1s
+Browser: firefox
+
+
+==================================================
+Test Suite: User Profile
+Test: should display updated username
+Status: FAILED
+==================================================
+
+Error: expect(received).toContain(expected)
+
+Expected substring:
+"Varthini"
+
+Received:
+"Guest User"
+
+Assertion:
+await expect(profileName).toContainText("Varthini")
+
+Stack Trace:
+at tests/profile.spec.ts:44:5
+
+Duration: 8.9s
+Browser: chromium
+
+
+==================================================
+Test Suite: Payment Service
+Test: should process payment successfully
+Status: FAILED
+==================================================
+
+Error: Request failed with status code 500
+
+Response:
+{
+  "message": "Internal Server Error"
+}
+
+Call log:
+- sending payment request
+- awaiting API response
+
+Stack Trace:
+at services/payment.client.ts:91:13
+at tests/payment.spec.ts:25:5
+
+Duration: 5.7s
+Browser: webkit
+
+
+==================================================
+Test Suite: Checkout Flow
+Test: should submit order successfully
+Status: FAILED
+==================================================
+
+Error: locator.click: strict mode violation
+
+Locator:
+page.locator('.submit-order-btn')
+
+Resolved to:
+3 elements matching selector ".submit-order-btn"
+
+Call log:
+- waiting for locator('.submit-order-btn')
+- locator resolved to 3 elements
+- attempting click action
+
+Stack Trace:
+at CheckoutPage.submitOrder (pages/checkout.page.ts:42:15)
+at tests/checkout.spec.ts:18:5
+
+Duration: 12.4s
+Browser: chromium
+
+
+==================================================
+Test Suite: User Profile
+Test: should display updated username
+Status: FAILED
+==================================================
+
+Error: expect(received).toContain(expected)
+
+Expected substring:
+"Varthini"
+
+Received:
+"Guest User"
+
+Assertion:
+await expect(profileName).toContainText("Varthini")
+
+Stack Trace:
+at tests/profile.spec.ts:44:5
+
+Duration: 8.9s
+Browser: chromium
+
+
+==================================================
+Test Suite: Payment Service
+Test: should process payment successfully
+Status: FAILED
+==================================================
+
+Error: Request failed with status code 500
+
+Response:
+{
+  "message": "Internal Server Error"
+}
+
+Call log:
+- sending payment request
+- awaiting API response
+
+Stack Trace:
+at services/payment.client.ts:91:13
+at tests/payment.spec.ts:25:5
+
+Duration: 5.7s
+Browser: webkit
+
+
+==================================================
+Test Suite: Cart Validation
+Test: should show correct item count
+Status: FAILED
+==================================================
+
+Error: expect(locator).toHaveCount(expected)
+
+Expected: 3
+Received: 2
+
+Assertion:
+await expect(cartItems).toHaveCount(3)
+
+Stack Trace:
+at tests/cart.spec.ts:38:7
+
+Duration: 6.3s
+Browser: chromium
+
+
+==================================================
+Test Suite: Search Flow
+Test: should display search results
+Status: FAILED
+==================================================
+
+Error: locator.fill: Timeout 10000ms exceeded.
+
+Locator:
+page.locator('#search-input')
+
+Call log:
+- waiting for locator('#search-input')
+- locator not visible
+
+Stack Trace:
+at SearchPage.search (pages/search.page.ts:22:10)
+at tests/search.spec.ts:14:5
+
+Duration: 10.1s
+Browser: firefox
+
+
+==================================================
+Test Suite: Order API
+Test: should create order successfully
+Status: FAILED
+==================================================
+
+Error: API request failed with status 503
+
+Request:
+POST /api/orders
+
+Response:
+{
+  "error": "Service Unavailable"
+}
+
+Network Details:
+connect ECONNRESET api.staging.internal:443
+
+Stack Trace:
+at api/order.client.ts:58:11
+at tests/order-api.spec.ts:21:5
+
+Duration: 4.2s
+Browser: chromium
+
+
+==================================================
+Test Suite: Search Flow
+Test: should display search results
+Status: FAILED
+==================================================
+
+Error: locator.fill: Timeout 10000ms exceeded.
+
+Locator:
+page.locator('#search-input')
+
+Call log:
+- waiting for locator('#search-input')
+- locator not visible
+
+Stack Trace:
+at SearchPage.search (pages/search.page.ts:22:10)
+at tests/search.spec.ts:14:5
+
+Duration: 10.1s
+Browser: firefox
+
+
+==================================================
+Test Suite: Registration Flow
+Test: should create new user
+Status: FAILED
+==================================================
+
+Error: page.waitForNavigation: Timeout 45000ms exceeded.
+
+Call log:
+- clicking submit button
+- waiting for navigation
+- no navigation event received
+
+Stack Trace:
+at tests/register.spec.ts:31:6
+
+Duration: 45.0s
+Browser: chromium
+
+
+==================================================
+Test Suite: Login Flow
+Test: should redirect to dashboard after login
+Status: FAILED
+==================================================
+
+Error: Test timeout of 30000ms exceeded.
+
+Call log:
+- navigating to https://staging-app.com/dashboard
+- waiting for URL to contain '/dashboard'
+- waiting for load state 'networkidle'
+
+Pending operation:
+await expect(page).toHaveURL(/dashboard/)
+
+Stack Trace:
+at tests/login.spec.ts:27:7
+
+Duration: 30.0s
+Browser: chromium
+
+
+==================================================
+Test Suite: Registration Flow
+Test: should create new user
+Status: FAILED
+==================================================
+
+Error: page.waitForNavigation: Timeout 45000ms exceeded.
+
+Call log:
+- clicking submit button
+- waiting for navigation
+- no navigation event received
+
+Stack Trace:
+at tests/register.spec.ts:31:6
+
+Duration: 45.0s
+Browser: chromium
+
+
+==================================================
+Test Suite: Payment Service
+Test: should process payment successfully
+Status: FAILED
+==================================================
+
+Error: Request failed with status code 500
+
+Response:
+{
+  "message": "Internal Server Error"
+}
+
+Call log:
+- sending payment request
+- awaiting API response
+
+Stack Trace:
+at services/payment.client.ts:91:13
+at tests/payment.spec.ts:25:5
+
+Duration: 5.7s
+Browser: webkit
+
+
+==================================================
+Test Suite: Login Flow
+Test: should redirect to dashboard after login
+Status: FAILED
+==================================================
+
+Error: Test timeout of 30000ms exceeded.
+
+Call log:
+- navigating to https://staging-app.com/dashboard
+- waiting for URL to contain '/dashboard'
+- waiting for load state 'networkidle'
+
+Pending operation:
+await expect(page).toHaveURL(/dashboard/)
+
+Stack Trace:
+at tests/login.spec.ts:27:7
+
+Duration: 30.0s
+Browser: chromium
+
+
+==================================================
+Test Suite: Cart Validation
+Test: should show correct item count
+Status: FAILED
+==================================================
+
+Error: expect(locator).toHaveCount(expected)
+
+Expected: 3
+Received: 2
+
+Assertion:
+await expect(cartItems).toHaveCount(3)
+
+Stack Trace:
+at tests/cart.spec.ts:38:7
+
+Duration: 6.3s
+Browser: chromium
+
+
+==================================================
+Test Suite: Login Flow
+Test: should redirect to dashboard after login
+Status: FAILED
+==================================================
+
+Error: Test timeout of 30000ms exceeded.
+
+Call log:
+- navigating to https://staging-app.com/dashboard
+- waiting for URL to contain '/dashboard'
+- waiting for load state 'networkidle'
+
+Pending operation:
+await expect(page).toHaveURL(/dashboard/)
+
+Stack Trace:
+at tests/login.spec.ts:27:7
+
+Duration: 30.0s
+Browser: chromium
+
+
+==================================================
+Test Suite: Registration Flow
+Test: should create new user
+Status: FAILED
+==================================================
+
+Error: page.waitForNavigation: Timeout 45000ms exceeded.
+
+Call log:
+- clicking submit button
+- waiting for navigation
+- no navigation event received
+
+Stack Trace:
+at tests/register.spec.ts:31:6
+
+Duration: 45.0s
+Browser: chromium
+
+
+==================================================
+Test Suite: Cart Validation
+Test: should show correct item count
+Status: FAILED
+==================================================
+
+Error: expect(locator).toHaveCount(expected)
+
+Expected: 3
+Received: 2
+
+Assertion:
+await expect(cartItems).toHaveCount(3)
+
+Stack Trace:
+at tests/cart.spec.ts:38:7
+
+Duration: 6.3s
+Browser: chromium
+
+
+==================================================
+Test Suite: Order API
+Test: should create order successfully
+Status: FAILED
+==================================================
+
+Error: API request failed with status 503
+
+Request:
+POST /api/orders
+
+Response:
+{
+  "error": "Service Unavailable"
+}
+
+Network Details:
+connect ECONNRESET api.staging.internal:443
+
+Stack Trace:
+at api/order.client.ts:58:11
+at tests/order-api.spec.ts:21:5
+
+Duration: 4.2s
+Browser: chromium
+
+
+==================================================
+Test Suite: Checkout Flow
+Test: should submit order successfully
+Status: FAILED
+==================================================
+
+Error: locator.click: strict mode violation
+
+Locator:
+page.locator('.submit-order-btn')
+
+Resolved to:
+3 elements matching selector ".submit-order-btn"
+
+Call log:
+- waiting for locator('.submit-order-btn')
+- locator resolved to 3 elements
+- attempting click action
+
+Stack Trace:
+at CheckoutPage.submitOrder (pages/checkout.page.ts:42:15)
+at tests/checkout.spec.ts:18:5
+
+Duration: 12.4s
+Browser: chromium
+
+
+==================================================
+Test Suite: Order API
+Test: should create order successfully
+Status: FAILED
+==================================================
+
+Error: API request failed with status 503
+
+Request:
+POST /api/orders
+
+Response:
+{
+  "error": "Service Unavailable"
+}
+
+Network Details:
+connect ECONNRESET api.staging.internal:443
+
+Stack Trace:
+at api/order.client.ts:58:11
+at tests/order-api.spec.ts:21:5
+
+Duration: 4.2s
+Browser: chromium

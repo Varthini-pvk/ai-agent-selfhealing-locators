@@ -1,15 +1,34 @@
-import fs from "fs";
-import { fileURLToPath } from "url";
-import path from "path";
+import { readFile } from "./utils/readfile.js"
+import {extractFailureSnippets} from "./preprocessing/failureExtractor.js"
 import { classifyFailure } from "./agents/failureClassifier.js";
+import { ClassifiedFailure } from "./types/classifiedFailures.js";
 
 
 async function main(){
     try{
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
-        const log = fs.readFileSync(path.join(__dirname,"logs","failure1.txt"), 'utf-8');
-        console.log (await classifyFailure(log));
+        const report = readFile("failure-logs/playwright_failure_logs_dataset.txt");
+        const failures = extractFailureSnippets(report);
+        const classifiedFailures: ClassifiedFailure[] = [];
+        for (const failureSnippet of failures)
+        {
+            try {
+
+            const classification = await classifyFailure(failureSnippet);
+
+             classifiedFailures.push({failureSnippet,classification});
+             console.log(classification);
+
+        } catch (error) {
+
+            console.error(
+            "Failure classification failed"
+            );
+
+            console.error(error);
+        }
+
+    }
+      
     }
     catch(error)
     {

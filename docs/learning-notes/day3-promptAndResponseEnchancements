@@ -1,0 +1,51 @@
+```md id="g2l7rq"
+# Day 3 — AI Failure Classification Pipeline
+
+## Concepts Learned
+- Prompt engineering for deterministic AI classification
+- Structured JSON outputs
+- Runtime validation using Zod
+- Modern TypeScript patterns (`as const`, `z.infer`)
+- Runtime vs compile-time concepts
+- AI preprocessing and context reduction
+- Orchestration pipeline architecture
+- Defensive AI engineering and validation
+
+---
+
+## Features Implemented
+- Playwright failure classification agent
+- Failure categories:
+  - selector_failure
+  - timeout
+  - assertion_failure
+  - backend_failure
+  - unknown
+- Failure extraction/preprocessing layer
+- Structured output validation using Zod
+- Typed workflow state
+- Modular AI project architecture
+- Realistic Playwright failure datasets
+
+---
+
+## Key Learnings
+- Never trust LLM output directly
+- Prompting is not validation
+- Relevant context > huge prompts
+- Preprocessing improves AI accuracy
+- AI outputs should become machine workflow inputs
+- Strong typing improves AI workflow reliability
+
+---
+
+# Next Day Expectations
+
+## Day 4 Focus
+- Build retry decision agent
+- Route failures based on classification
+- Introduce AI decision-making workflows
+- Learn tool calling / agent actions
+- Build retry orchestration layer
+- Start auto-healing architecture foundation
+```
